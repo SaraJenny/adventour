@@ -1,0 +1,1192 @@
+/*
+* Sara Petersson - Webbanvändbarhet, DT068G
+* 
+*/
+
+/*********************
+TABLE OF CONTENTS
+*********************/
+
+/*
+ * TABLE OF CONTENT
+ * RESET
+ * BASE
+ * HEADER
+ * MAINCONTENT: STRUKTUR
+ * MAINCONTENT: TEXT
+ * FOOTER
+ * MEDIA QUERIES
+*/
+
+
+
+
+
+/*********************
+§RESET
+*********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/*****************************************************************************
+§BASE
+*****************************************************************************/
+
+html {
+	height: 100%; 
+	background: #f5f5f5 url("../images/background2.jpg") no-repeat top center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 100%;
+	color: #1a140e;
+	height: 100%;
+	line-height: 1.5em;
+}
+
+/* Sidornas individuella innehåll */
+#mainContent {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 2.5% 0;
+	overflow: hidden;
+	position: relative;
+	background-color: #f5f5f5;
+}
+
+main {
+	min-height: 100%;
+	margin-bottom: -244px;
+	background-color: #f5f5f5;
+}
+
+main:after {
+	content: "";
+	display: block;
+	height: 244px;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+
+
+
+/*****************************************************************************
+§HEADER
+*****************************************************************************/
+
+/* Länk för att hoppa till innehåll */
+	#skip {
+		position: absolute;
+		left: -10000px;
+	}
+
+	#skip:focus {
+		color: #ac3700;
+		margin-right: 5%;
+		position: absolute;
+		left: 0;
+		background-color: #f5f5f5;
+		padding: 1%;
+	}
+
+	#skip:hover {
+		color: #126058;
+		text-decoration: underline;
+	}
+
+header {
+	height: 187px;
+	background-color: rgba(245,245,245,.5);
+}
+
+/* Sidhuvudet */
+#headerSection {
+	max-width: 940px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* SPRÅKVAL */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	    color: #ac3700;
+	    font-size: .875em;
+	}
+
+	.dropdown p {
+		font-size: .95em;
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f5f5f5;
+	    min-width: 95px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    padding: 12px 16px;
+	}
+
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+
+	.dropdown a:hover {
+		color: #126058;
+	}
+
+	.dropdown-content a {
+	    font-size: .95em;
+	}
+
+/* LOGOTYP */
+	#logo {
+		float: left;
+		width: 24.5%;
+		margin-right: 25.5%;
+	}
+
+	#logo figcaption {
+		color: #1a140e;
+		font-size: 1.125em;
+		font-style: italic;
+		font-weight: 700;
+		text-align: right;
+	}
+
+	h1 {
+		visibility: hidden;
+		height: 1px;
+	}
+
+/* Sökbox */
+#searchbox {
+	float: right;
+}
+
+/* Sökfält */
+#search {
+	height: 38px;
+	width: 278px;
+	float: left;
+	border: 1px solid #b2a7a0;
+	background-color: #f5f5f5;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 5px;
+}
+
+/* Sökknapp */
+	#submitSearch {
+		width: 59px;
+		height: 38px;
+		float: left;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background: #ac3700 url("../images/interface/search.png") no-repeat center;
+		color: #ac3700;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		color: transparent;
+	}
+
+	#submitSearch:hover {
+		background: #126058 url("../images/interface/search.png") no-repeat center;
+	}
+
+/* Döljer element */
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/* MENY */
+	header a:hover {
+		text-decoration: none;
+	}
+
+	nav {
+		width: 50%;
+		max-width: 520px;
+		margin: 84px auto 0;
+		float: left;
+	}
+
+	nav li {
+		display: inline-block;
+		margin-right: 22.81%;
+	}
+
+	nav li:last-child {
+		margin-right: 0;
+	}
+
+	nav a {
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 1.125em;
+		transition: all 0.5s;
+	}
+
+	/* Effekt vid hover och aktuell sida */
+	nav li:hover a, .current a {
+		color: #126058;
+	}
+
+	/* Effekt vid hover och aktuell sida */
+	nav li:hover:after, .current:after {
+		content: "";
+		display: block;
+		height: 3px;
+		position: relative;
+		bottom: -1px;
+		background: #126058;
+	}
+
+	/* Mobilmeny */
+	.toggle-nav {
+		display: none;
+	}
+
+/* BREADCRUMBS */
+	#breadcrumbs {
+		height: 37px;
+		background-color: #0fac9c;
+		color: #f5f5f5;
+	}
+
+	#inner-breadcrumb {
+		max-width: 940px;
+		margin: 0 auto;
+		padding: 5px 0;
+	}
+
+	#breadcrumbs a {
+		color: #f5f5f5;
+		text-decoration: none;
+	}
+
+	/* Gör texten för den aktuella sidan fet */
+	#inner-breadcrumb img+span {
+		font-weight: 700;
+	}
+
+	#breadcrumbs span {
+		font-size: .7em;
+		text-transform: uppercase;
+	}
+
+	#breadcrumbs a span {
+		font-size: .875em;
+	}
+
+	#breadcrumbs a span:hover {
+		text-decoration: underline;
+	}
+
+	/* >-tecken mellan nivåer */
+	.arrow {
+		position: relative;
+		top: 3px;
+		margin: 0 10px;
+	}
+
+
+
+
+
+
+/*****************************************************************************
+§MAINCONTENT: STRUKTUR
+*****************************************************************************/
+
+/* Huvudspalt */
+.mainContainer {
+	float: left;
+	width: 61.5%;
+	margin-right: 8.5%;
+}
+
+aside {
+	float: left;
+	width: 30%;
+}
+
+/* Fade-effekt på länkade bilder */
+	.fade {
+		opacity: 1;
+		transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out;
+	}
+
+	.fade:hover {
+		opacity: .8;
+	}
+
+/* ---------- INDEX.PHP ---------- */
+
+/* Teasersektion */
+#teaser {
+	max-width: 940px;
+	height: 450px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Bildsektion */
+	.imageSection a {
+		float: left;
+		margin-bottom: 3.6170212%;
+	}
+
+	.imageSection a:nth-child(odd) {
+		margin-right: 4.2553191%;
+	}
+
+	.imageSection figure {
+		position: relative;
+	}
+
+	.imageSection figcaption {
+		font-family: 'Mouse Memoirs', sans-serif;
+		font-size: 1.875em;
+		color: #f5f5f5;
+		text-shadow: 1.5px 2.598px 5px rgba(0, 0, 0, 0.35);
+		position: absolute;
+		bottom: 20px;
+		right: 25px;
+		line-height: 1em;
+	}
+
+	.imageSection a:first-child figcaption {
+		top: 32px;
+		left: 59px;
+	}
+
+	.imageSection a:nth-child(2) figcaption {
+		top: 20px;
+		right: 16px;
+		text-align: right;
+	}
+
+	.imageSection a:nth-child(3) figcaption {
+		top: 28px;
+		left: 26px;
+	}
+
+	.imageSection a:last-child figcaption {
+		bottom: 30px;
+		right: 54px;
+	}
+
+/* Sektion för kommande resor */
+#upcoming {
+	float: left;
+	width: 59%;
+}
+
+/* Sektion för instagram */
+#instagram {
+	width: 41%;
+}
+
+iframe {
+	border:none;
+	overflow:hidden;
+	width:390px;
+	height:390px;
+}
+
+/* ---------- RESOR.PHP ---------- */
+
+/* Resmålsväljare */
+#destination {
+	background-color: rgba(147, 120, 13, .2);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 220px;
+	padding: 30px;
+}
+
+/* Resmålsformulär */
+	#destinationForm {
+		font-size: 1.125em;
+		line-height: 1.6em;
+	}
+
+	#destinationForm label {
+		text-transform: uppercase;
+		font-size: 1.125em;
+		display: block;
+		font-weight: 700;
+		margin-top: 30px;
+	}
+
+	#destinationForm select {
+		width: 100%;
+		border: 1px solid #0fac9c;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #f5ede5;
+		height: 35px;
+		padding: 0 19px;
+		font-size: .875em;
+		margin: 10px 0;
+	}
+
+/* Sektion för alla resor */
+	#travelSection {
+		margin: 0 0 0 8.5%;
+		width: 61.5%;
+		float: left;
+	}
+
+	#travelSection a {
+		font-size: 1em;
+		color: #1a140e;
+	}
+
+	#travelSection a:hover {
+		text-decoration: none;
+	}
+
+	#travelSection img {
+		float: left;
+		margin-right: 5%;
+	}
+
+	#travelSection article {
+		overflow: hidden;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #0fac9c;
+	}
+
+/* Mer information-knapp */
+#travelSection .travelButton {
+	width: 178px;
+	float: left;
+	line-height: 48px;
+}
+
+/* Informationssektion */
+.infoSection {
+	float: left;
+	margin-top: .7em;
+	width: 63.5%;
+}
+
+/* Knappar */
+button, #destinationForm input[type="submit"], #submitBooking, #submitMessage, .travelButton {
+	border: 1px solid #6e2300;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #ac3700;
+	width: 100%;
+	height: 48px;
+	font-size: 1.125em;
+	font-weight: 700;
+	color: #f5f5f5;
+	text-align: center;
+	letter-spacing: .5px;
+	margin-top: 1em;
+	cursor: pointer;
+}
+
+/* Knappar */
+button:hover, #destinationForm input[type="submit"]:hover, #submitBooking:hover, #submitMessage:hover {
+	background-color: #126058;
+}
+
+/* Meddelande för tomt resultat */
+.emptyMessage {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+/* Individuella info-sektioner */
+	.infoContainer {
+		float: left;
+		width: 45%;
+	}
+
+	.infoSection div:nth-child(3) {
+		margin-top: 1em;
+	}
+
+/* Länk för att hoppa upp på sidan */
+#up {
+	text-align: center;
+	float: right;
+}
+
+
+
+
+/* ---------- RESA.PHP ---------- */
+
+/* Informationsmeny */
+	#travelNav {
+		margin: 2.625em 0 1em;
+	}
+
+	#travelNav li {
+		display: inline-block;
+		background-color: #ac3700;
+		width: 24.87%;
+		height: 2.3125em;
+		/*padding: .75em 0; /*7.783%; /* 7.848% */
+		margin-right: 1px;
+	}
+
+	#travelNav li:last-child {
+		margin-right: 0;
+	}
+
+	#travelNav li:hover, #travelNav .chosen {
+		background-color: #126058;
+	}
+
+	#travelNav a {
+		font-weight: 700;
+		color: #f5f5f5;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		text-align: center;
+		line-height: 2.3125em;
+	}
+
+
+	#travelNav a:hover {
+		text-decoration: none;
+	}
+
+/* Innehållet för reseupplägg, pris och foton */
+#plan, #price, #photo {
+	display: none;
+}
+
+/* Fotosidan */
+	#photo a {
+		margin-right: .33%;
+	}
+
+	#photo a:nth-child(4) {
+		margin-right: 0;
+		float: right;
+	}
+
+/* Google map */
+#map {
+	width: 100%;
+	max-width: 280px;
+	height: 300px;
+	margin-bottom: 3em;
+}
+
+/* Bokningsknapp */
+#bookingButton {
+	float: none;
+	display: none;
+}
+
+/* Bokningssektion */
+#bookingSection {
+	margin-top: 3em;
+}
+
+/* Boknings- och kontaktformulär */
+#bookingForm label, #contactForm label {
+	display: block;
+	font-weight: 700;
+	margin-top: 1em;
+}
+
+input[type="text"], input[type="email"], textarea {
+	width: 85%;
+	border: 1px solid #0fac9c;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #f5ede5;
+	height: 35px;
+	padding: 0 19px;
+	font-size: .875em;
+}
+
+textarea {
+	height: 150px;
+	padding: 19px;
+	font-family: 'Lato', sans-serif;
+	width: 93%;
+}
+
+/* Bokningsmeddelande */
+.message {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 1em 0;
+	font-size: 1em;
+	font-weight: 700;
+	padding: 5%;
+	font-size: .875em;
+}
+
+/* Meddelande för lyckat formulärskickande */
+.success {
+	background-color: rgba(50,205,50,.2);
+}
+
+/* Meddelande för misslyckat formulärskickande */
+.fail {
+	background-color: rgba(228, 46, 31, .2);
+}
+
+/* ---------- KONTAKT.PHP ---------- */
+
+/* Kontaktformulär */
+#contactForm input[type="text"], #contactForm input[type="email"] {
+	width: 93%;
+}
+
+
+
+
+
+
+
+
+/*****************************************************************************
+§MAINCONTENT: TEXT
+*****************************************************************************/
+
+h2 {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 5em;
+	color: #126058;
+	text-align: center;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+}
+
+/* Welcome blurb (index.php) */
+#teaser h2 {
+	font-size: 6.875em;
+	color: #f5f5f5;
+	position: absolute;
+	top: 21%;
+	left: 0;
+	line-height: 1em;
+	text-align: right;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 3em;
+	color: #1a140e;
+	margin: 5px 0 .5em;
+}
+
+/* Rubrik i resmålsväljaren (resor.php) */
+#destination h3 {
+	text-align: center;
+	color: #1a140e;
+}
+
+p+h3 {
+	margin-top: 1em;
+}
+
+h4 {
+	font-weight: 700;
+	margin-top: 1em;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+p+p {
+	margin-top: 1em;
+}
+
+/* Rubriker: Antal dagar / Pris från / Avresedag */
+.heading {
+	font-size: .75em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* Information: Antal dagar / Pris från / Avresedag */
+.info {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #126058;
+	line-height: 1.25em;
+}
+
+.heading+.info {
+	margin-top: 0;
+}
+
+/* Felmeddelanden i formulär */
+.error {
+	color: #e42e1f;
+}
+
+a {
+	color: #ac3700;
+	text-decoration: none;
+	font-size: .875em;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.mainContainer p a {
+	font-size: 1em;
+}
+
+/* Kommande resor (index.php) */
+#upcoming p {
+	margin-bottom: 1em;
+	line-height: .8em;
+}
+
+/* Datum */
+.date {
+	font-weight: 700;
+}
+
+/* Welcome blurb (index.php) */
+#teaser p {
+	font-family: 'Mouse Memoirs', sans-serif;
+	color: #1a140e;
+	font-size: 1.7em;
+	line-height: 1.3em;
+	position: absolute;
+	right: 0;
+	bottom: 2%;
+	background-color: rgba(245,245,245,.9);
+	padding: .5em 1em;
+	font-weight: 700;
+	width: 50%;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	border: 2px solid #0fac9c;
+}
+
+/* Framhävda ord */
+.em {
+	color: #0fac9c;
+}
+
+/* Kundomdömen */
+blockquote {
+	font-style: italic;
+}
+
+p+blockquote {
+	margin-top: 1em;
+}
+
+
+
+
+
+
+/*****************************************************************************
+§FOOTER
+*****************************************************************************/
+
+footer {
+	background-color: #126058;
+	height: 184px;
+	color: #f5f5f5;
+	text-align: center;
+	padding: 30px 0;
+	font-size: .875em;
+}
+
+/* Sektion i footer */
+#footerSection {
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+footer a {
+	color: #f5f5f5;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+footer a:hover {
+	font-weight: 700;
+}
+
+
+
+
+
+
+/*****************************************************************************
+MEDIA QUERIES
+*****************************************************************************/
+@media screen and (max-width: 1000px) {
+
+	/* Sidhuvud */
+	#headerSection {
+		padding: 0 2%;
+	}
+
+	/* Logotyp */
+    #logo {
+    	margin-right: 10.5%;
+    }
+
+    nav {
+    	width: 65%;
+    	max-width: none;
+    }
+
+    /* Huvdsakligt innehåll */
+	#mainContent {
+		max-width: none;
+		padding: 2.5%;
+	}
+
+	aside {
+		float: none;
+		width: 100%;
+	}
+	
+	/* Sektioner */
+	#destination, #travelSection, .mainContainer {
+		float: none;
+		width: 90%;
+		padding: 5%;
+		margin: 0;
+	}
+
+	/* Resesektion */
+	#travelSection article {
+		padding-top: 1em;
+	}
+
+	/* Google map */
+	#map {
+		width: 95%;
+		max-width: none;
+		height: 300px;
+		margin: 0 auto 3em;
+	}
+
+	button {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+
+@media screen and (max-width:1000px) and (-webkit-min-device-pixel-ratio: 2) {
+
+	body {
+		font-size: 300%;
+	}
+
+    header {
+    	background-color: #f5f5f5;
+    	overflow: visible;
+    }
+
+    /* Sökboxen */
+	#searchbox {
+		display: none;
+	}
+
+	/* Breadcrumbs */
+	#breadcrumbs {
+		display: none;
+	}
+
+	/* Logotyp */
+	#logo {
+		float: none;
+		margin: 0 auto;
+	}
+
+	#logo figcaption {
+		display: none;
+	}
+
+	/* MENY */
+	nav {
+		width: 95%;
+		margin: 0;
+		float: none;
+		padding: 1% 2.5%;
+        position:relative;
+        display:inline-block;
+        max-width: none;
+	}
+
+	/* Navigationen */
+    .menu {
+        position:relative;
+        display:inline-block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        z-index: 5;
+    }
+ 
+ 	/* Döljer menyalternativen */
+    .menu ul.active {
+        display:none;
+    }
+ 
+ 	/* Menyalternativen */
+    .menu ul {
+        width:100%;
+        position:absolute;
+        top:120%;
+        left:0px;
+        border-radius:3px;
+        background:#303030;
+    }
+ 
+    .menu ul:after {
+        width:0px;
+        height:0px;
+        position:absolute;
+        top:0%;
+        right:22px;
+        content:'';
+        transform:translate(0%, -100%);
+        border-left:7px solid transparent;
+        border-right:7px solid transparent;
+        border-bottom:7px solid #303030;
+    }
+ 
+    .menu li {
+        margin:5px 0px;
+        padding: 1% 5%;
+        float:none;
+        display:block;
+    }
+
+    /* Aktuellt menyalternativ */
+    .menu .current, .menu li:hover {
+    	background-color: #444444;
+    }
+ 
+    .menu a {
+        display:block;
+        color: #ffffff;
+        font-size: 1.2em;
+        line-height: 2.5em;
+    }
+ 
+    .menu a:hover {
+    	color: #ffffff;
+    }
+ 
+ 	/* Mobilmeny */
+    .menu .toggle-nav {
+        float: right;
+        display: inline-block;
+        color: #ac3700;
+        font-size: 3em;
+        transition:color linear 0.15s;
+        line-height: 1em;
+        margin-right: 2%;
+    }
+ 
+    .menu .toggle-nav:hover, .toggle-nav.active {
+        text-decoration: none;
+        color: #126058;
+    }
+
+	/* Effekt vid hover och aktuell sida */
+	nav li:hover:after, .current:after {
+		display: none;
+	}
+
+	h2 {
+		font-size: 3em;
+		margin: 80px 0;
+	}
+
+	input[type="checkbox"] {
+		-ms-transform: scale(2); /* IE */
+		-moz-transform: scale(2); /* FF */
+		-webkit-transform: scale(2); /* Safari and Chrome */
+		-o-transform: scale(2); /* Opera */
+		padding: 20px;
+		margin-right: 40px;
+		line-height: 2em;
+	}
+
+	/* Resmålsväjaren */
+	#destinationForm select {
+		height: 75px;
+		padding: 0 19px;
+		font-size: .875em;
+		margin: 10px 0;
+	}
+
+	/* Knappar */
+	button, #destinationForm input[type="submit"], #submitBooking, #submitMessage, .travelButton {
+		height: 100px;
+	}
+
+	#travelSection .travelButton {
+		width: 49%;
+		font-size: 1em;
+		height: 3em;
+		line-height: 3em;
+	}
+
+	/* Knappar */
+	button:hover, #destinationForm input[type="submit"]:hover, #submitBooking:hover, #submitMessage:hover {
+		background-color: #126058;
+	}
+
+	input[type="text"], input[type="email"], textarea {
+		width: 85%;
+		height: 75px;
+	}
+
+	textarea {
+		height: 250px;
+		width: 93%;
+		padding: 19px;
+		font-family: 'Lato', sans-serif;
+	}
+
+	/* Informationssektion */
+	.infoSection {
+		width: 100%;
+	}
+
+	/* Individuella info-sektioner */
+	.infoContainer {
+		width: 50%;
+	}
+
+	/* Undermeny (resa.php) */
+	#travelNav {
+		font-size: .8em;
+	}
+
+	/* Teasersektion på startsidan */
+	#teaser {
+		display: none;
+	}
+
+	/* Bildsektion */
+	.imageSection a {
+		margin: 0;
+		margin-bottom: 0;
+		width: 100%;
+		float: none;
+	}
+
+	.imageSection figcaption {
+		font-size: 1.4em;
+	}
+
+	h3 {
+		margin-top: .5em;
+		font-size: 2em;
+	}
+
+	footer {
+		height: auto;
+	}
+}
