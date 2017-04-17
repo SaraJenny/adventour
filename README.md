@@ -4,9 +4,12 @@ Slutprojekt i kursen "Webbanvändbarhet" (Mittuniversitetet - Webbutvecklarprogr
 - Under detta kursmoment ska vi skapa en webbplats med fokus på användbarhet.
 - Du skall designa och implementera en mindre webbplats för en valfri verksamhet/organisation.
 - Designa innebär att du skall göra målgruppsanalys, storyboard och testplanering för webbplatsen.
-- Du skall implementera en del av webbplatsen. Delar som du inte tekniskt kan implementera men du anser är viktiga för användbarhet kan du lösa med hjälp an en bild eller
-ett textmeddelande.
+- Du skall implementera en del av webbplatsen. Delar som du inte tekniskt kan implementera men du anser är viktiga för användbarhet kan du lösa med hjälp an en bild eller ett textmeddelande.
 - När du gjort detta skall ett test genomföras och dokumenteras. I denna kurs är det främst användbarheten som skall testas. När detta är klart skall webbplatsen publiceras.
+- Beskrivning av användbarhetstest (Interface) och testresultat.
+- Den grafiska profilen webbplatsen använder ska ta hänsyn till internationalisering.
+- Webbplatsen skall innehålla minst 3 sidor.
+- Webbplatsen skall vara anpassad för funktionshindrade och ha användbara funktioner för användare så de kan lösa de problem de vill med sidorna. Detta innebär att det kan finnas olika former av komponenter. (Lightbox, Script-språk, Word, PDF mm).
 
 ## Lärarnas omdöme
 - Riktigt väl genomförd webbplats. Färger och bilder passar väl in i desigen, och för målgruppen. 
